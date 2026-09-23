@@ -1,0 +1,13 @@
+{
+  "name": "devops-capstone",
+  "version": "1.0.0",
+  "description": "DevOps Capstone Node.js Application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node --check app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
