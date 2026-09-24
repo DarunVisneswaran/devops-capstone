@@ -55,6 +55,23 @@ pipeline {
             }
         }
     }
+    stage('Deploy to App EC2') {
+    steps {
+        sshagent(['app-ec2-ssh']) {
+            sh '''
+                ssh -o StrictHostKeyChecking=no ubuntu@13.126.254.144 "
+                    docker pull $IMAGE_NAME &&
+                    docker stop devops-app || true &&
+                    docker rm devops-app || true &&
+                    docker run -d \
+                        --name devops-app \
+                        -p 8080:3000 \
+                        $IMAGE_NAME
+                "
+            '''
+        }
+    }
+}
 
     post {
         success {
