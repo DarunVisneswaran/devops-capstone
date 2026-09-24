@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        IMAGE_NAME = 'darundoc/devops-capstone:latest'
+    }
+
     stages {
 
         stage('Checkout') {
@@ -24,15 +28,37 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t darundoc/devops-capstone:latest .'
+                sh 'docker build -t $IMAGE_NAME .'
             }
         }
 
+        stage('Login to Docker Hub') {
+            steps {
+                withCredentials([
+                    usernamePassword(
+                        credentialsId: 'dockerhub-credentials',
+                        usernameVariable: 'DOCKER_USERNAME',
+                        passwordVariable: 'DOCKER_PASSWORD'
+                    )
+                ]) {
+                    sh '''
+                        echo "$DOCKER_PASSWORD" | docker login \
+                        -u "$DOCKER_USERNAME" --password-stdin
+                    '''
+                }
+            }
+        }
+
+        stage('Push Docker Image') {
+            steps {
+                sh 'docker push $IMAGE_NAME'
+            }
+        }
     }
 
     post {
         success {
-            echo 'Pipeline completed successfully!'
+            echo 'Build and Docker Hub push completed successfully!'
         }
 
         failure {
