@@ -74,6 +74,8 @@ The main objectives of this project are:
               📊 GRAFANA                         ⏰ CRON
 
 
+```
+
 🛠️ TECHNOLOGY STACK
 
 💻 APPLICATION
@@ -198,10 +200,13 @@ devops-capstone/
 
 1️⃣ CLONE THE REPOSITORY
 git clone https://github.com/DarunVisneswaran/devops-capstone.git
+
 2️⃣ NAVIGATE TO THE PROJECT
 cd devops-capstone
+
 3️⃣ INSTALL DEPENDENCIES
 npm install
+
 4️⃣ START THE APPLICATION
 node app.js
 
