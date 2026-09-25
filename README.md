@@ -70,6 +70,7 @@ The main goal of this project is to demonstrate how a modern DevOps workflow can
                     │                                │
                     ▼                                ▼
               📊 Grafana                       ⏰ Cron
+
 🛠️ Technology Stack
 🧩 Category	🔧 Technology
 💻 Application	Node.js
