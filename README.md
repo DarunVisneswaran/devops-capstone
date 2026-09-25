@@ -1,97 +1,180 @@
-# ☁️ DevOps Capstone Project 🚀
+# ☁️ DEVOPS CAPSTONE PROJECT 🚀
 
 ## 🌐 End-to-End DevOps Pipeline for a Node.js Web Application
 
 <p align="center">
 
-🚀 **Build • Test • Containerize • Deploy • Monitor • Automate**
+🚀 <strong>BUILD • TEST • CONTAINERIZE • DEPLOY • MONITOR • AUTOMATE</strong>
 
 </p>
 
 ---
 
-## 📌 Project Overview
+# 📌 PROJECT OVERVIEW
 
-This project demonstrates an **end-to-end DevOps workflow** for a Node.js web application.
+This project demonstrates an end-to-end DevOps workflow for a Node.js web application.
 
-The application is developed locally, version-controlled using **Git & GitHub**, automatically built and validated using **Jenkins**, containerized with **Docker**, pushed to **Docker Hub**, and deployed to **AWS EC2**.
+The application is developed locally and maintained using Git and GitHub. Jenkins automates the CI/CD pipeline by installing dependencies, validating the application, building the Docker image, pushing the image to Docker Hub, and deploying the application to AWS EC2.
 
-The application is monitored using **Prometheus, Grafana, and Node Exporter**, while **Bash scripting and Cron** are used to automate application log backups.
-
----
-
-## 🎯 Project Goals
-
-The main goal of this project is to demonstrate how a modern DevOps workflow can automate the complete application delivery lifecycle.
-
-✨ **Source Code Management**  
-🔄 **Continuous Integration**  
-🐳 **Containerization**  
-📦 **Container Image Management**  
-☁️ **Cloud Deployment**  
-📊 **Infrastructure Monitoring**  
-🛠️ **Automation & Backup**
+The deployed application is monitored using Prometheus, Grafana, and Node Exporter. Bash scripting and Cron are used to automate application log backups.
 
 ---
 
-# 🏗️ Architecture
+# 🎯 PROJECT OBJECTIVES
+
+The main objectives of this project are:
+
+- ✨ Implement Git and GitHub for source code management
+- 🔄 Create an automated CI/CD pipeline using Jenkins
+- 🐳 Containerize the Node.js application using Docker
+- 📦 Store Docker images in Docker Hub
+- ☁️ Deploy the application on AWS EC2
+- 📊 Monitor infrastructure using Prometheus and Grafana
+- 📡 Collect system metrics using Node Exporter
+- 🐚 Automate application log backups using Bash
+- ⏰ Schedule backups using Cron
+
+---
+
+# 🏗️ PROJECT ARCHITECTURE
 
 ```text
-                    👨‍💻 Developer
-                         │
-                         ▼
-                  🐙 GitHub Repository
-                         │
-                         │ Webhook / Trigger
-                         ▼
-                  🔧 Jenkins CI/CD
-                         │
-             ┌───────────┼───────────┐
-             │           │           │
-             ▼           ▼           ▼
-          📥 Checkout  🧪 Test    🐳 Docker Build
-                                     │
-                                     ▼
-                              📦 Docker Hub
-                                     │
-                                     ▼
+                    👨‍💻 DEVELOPER
+                         |
+                         v
+                  🐙 GITHUB REPOSITORY
+                         |
+                         | Webhook / Trigger
+                         v
+                  🔧 JENKINS CI/CD
+                         |
+             +-----------+-----------+
+             |           |           |
+             v           v           v
+          📥 CHECKOUT  🧪 TEST    🐳 DOCKER BUILD
+                                     |
+                                     v
+                              📦 DOCKER HUB
+                                     |
+                                     v
                               ☁️ AWS EC2
-                                     │
-                                     ▼
-                            🚀 Node.js App
-                                     │
-                    ┌────────────────┴───────────────┐
-                    │                                │
-                    ▼                                ▼
-             📡 Node Exporter                  📝 App Logs
-                    │                                │
-                    ▼                                ▼
-              🔍 Prometheus                  🛠️ Bash Script
-                    │                                │
-                    ▼                                ▼
-              📊 Grafana                       ⏰ Cron
+                                     |
+                                     v
+                            🚀 NODE.JS APP
+                                     |
+                    +----------------+----------------+
+                    |                                 |
+                    v                                 v
+             📡 NODE EXPORTER                   📝 APP LOGS
+                    |                                 |
+                    v                                 v
+              🔍 PROMETHEUS                    🛠️ BASH SCRIPT
+                    |                                 |
+                    v                                 v
+              📊 GRAFANA                         ⏰ CRON
 
-🛠️ Technology Stack
-🧩 Category	🔧 Technology
-💻 Application	Node.js
-📝 Programming	JavaScript
-🌿 Version Control	Git
-🐙 Repository	GitHub
-🔧 CI/CD	Jenkins
-🐳 Containerization	Docker
-📦 Image Registry	Docker Hub
-☁️ Cloud Platform	AWS EC2
-🔍 Monitoring	Prometheus
-📊 Visualization	Grafana
-📡 System Metrics	Node Exporter
-🐚 Automation	Bash Shell Script
-⏰ Scheduling	Cron
-🐧 Operating System	Ubuntu Linux
-🌐 Application
 
-The project includes a professional Cloud & DevOps themed Node.js web application.
+🛠️ TECHNOLOGY STACK
 
-The website presents the major DevOps technologies used in the project, including:
+💻 APPLICATION
+
+Node.js
+
+Used to develop and run the web application.
+
+📝 PROGRAMMING LANGUAGE
+
+JavaScript
+
+Used for developing the Node.js application.
+
+🌿 VERSION CONTROL
+
+Git
+
+Used to track source code changes.
+
+🐙 SOURCE CODE REPOSITORY
+
+GitHub
+
+Repository: https://github.com/DarunVisneswaran/devops-capstone
+
+🔧 CI/CD
+
+Jenkins
+
+Used to automate:
+Source code checkout
+Dependency installation
+Application validation
+Docker image build
+Docker Hub push
+AWS EC2 deployment
+
+🐳 CONTAINERIZATION
+
+Docker
+
+Used to package the Node.js application into a portable container.
+
+📦 CONTAINER REGISTRY
+
+Docker Hub
+
+Docker image:
+
+darundoc/devops-capstone:latest
+
+☁️ CLOUD PLATFORM
+
+AWS EC2 - Used to host the Jenkins environment and deploy the Node.js application.
+
+🔍 MONITORING
+
+Prometheus
+
+Used to collect system metrics.
+
+📊 VISUALIZATION
+
+Grafana
+
+Used to visualize monitoring metrics through dashboards.
+
+📡 SYSTEM METRICS
+
+Node Exporter
+
+Used to expose system-level metrics including:
+CPU
+Memory
+Disk
+Network
+
+🐚 AUTOMATION
+
+Bash Shell Script
+
+Used to automate Docker application log backups.
+
+⏰ SCHEDULING
+
+Cron
+
+Used to execute the backup script automatically every day at 2:00 AM.
+
+🐧 OPERATING SYSTEM
+
+Ubuntu Linux
+
+Used for the AWS EC2 environments.
+
+🌐 APPLICATION
+
+The project contains a professional Cloud and DevOps themed Node.js web application.
+
+The application presents the major technologies used in the project:
 
 ☁️ AWS
 🐙 GitHub
@@ -99,18 +182,8 @@ The website presents the major DevOps technologies used in the project, includin
 🐳 Docker
 🔍 Prometheus
 📊 Grafana
-🔄 CI/CD Pipeline
-
-🚪 Application Port
-
-The Node.js application runs on:
-
-Port: 3000
-
-When deployed through Docker on AWS EC2:
-
-EC2 Port 8080 → Container Port 3000
-📂 Project Structure
+🔄 CI/CD
+📂 PROJECT STRUCTURE
 devops-capstone/
 │
 ├── 📄 app.js
@@ -120,175 +193,339 @@ devops-capstone/
 ├── 🔧 Jenkinsfile
 ├── 🚫 .gitignore
 └── 📘 README.md
-💻 Local Setup
-1️⃣ Clone the Repository
+
+💻 LOCAL APPLICATION SETUP
+
+1️⃣ CLONE THE REPOSITORY
 git clone https://github.com/DarunVisneswaran/devops-capstone.git
-2️⃣ Navigate to the Project
+2️⃣ NAVIGATE TO THE PROJECT
 cd devops-capstone
-3️⃣ Install Dependencies
+3️⃣ INSTALL DEPENDENCIES
 npm install
-4️⃣ Start the Application
+4️⃣ START THE APPLICATION
 node app.js
 
-The application will be available at:
+The application runs on:
 
 http://localhost:3000
-🐳 Docker Setup
-🔨 Build Docker Image
-docker build -t darundoc/devops-capstone:latest .
-🚀 Run Docker Container
-docker run -d \
-  --name devops-app \
-  -p 8080:3000 \
-  darundoc/devops-capstone:latest
+🐳 DOCKER CONFIGURATION
 
-The deployed application can then be accessed through:
+The project uses the following Dockerfile:
+
+FROM node:20
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["node", "app.js"]
+
+🐳 BUILD THE DOCKER IMAGE
+docker build -t darundoc/devops-capstone:latest .
+
+🚀 RUN THE DOCKER CONTAINER
+docker run -d --name devops-app -p 8080:3000 darundoc/devops-capstone:latest
+
+The deployed application can be accessed using:
 
 http://<EC2-PUBLIC-IP>:8080
-🔄 CI/CD Pipeline
 
-The Jenkins pipeline automates the application delivery process from source code to AWS deployment.
+🔄 JENKINS CI/CD PIPELINE
 
-🔹 Pipeline Stages
-1️⃣ 📥 Checkout
+The Jenkins pipeline automates the complete application delivery process.
 
-Jenkins retrieves the latest source code from GitHub.
+🔹 PIPELINE STAGES
 
-2️⃣ 📦 Install Dependencies
+1️⃣ CHECKOUT
 
-Node.js dependencies are installed using:
+Jenkins retrieves the application source code from GitHub.
+
+2️⃣ INSTALL DEPENDENCIES
+
+Jenkins installs Node.js dependencies:
 
 npm install
-3️⃣ 🧪 Test
 
-The application JavaScript syntax is validated using:
+3️⃣ TEST
+
+The JavaScript syntax is validated using:
 
 node --check app.js
-4️⃣ 🐳 Build Docker Image
 
-Jenkins builds the application into a Docker image.
+4️⃣ BUILD DOCKER IMAGE
 
-5️⃣ 🔐 Login to Docker Hub
-
-Jenkins securely authenticates with Docker Hub using stored credentials.
-
-6️⃣ 📤 Push Docker Image
-
-The Docker image is pushed to:
+Jenkins builds the Docker image:
 
 darundoc/devops-capstone:latest
-7️⃣ ☁️ Deploy to AWS EC2
 
-Jenkins connects to the Application EC2 instance using SSH and:
+5️⃣ LOGIN TO DOCKER HUB
 
-Pulls the latest Docker image
-Stops the existing container
-Removes the old container
-Starts the updated container
-📊 Monitoring & Observability
+Jenkins authenticates with Docker Hub using securely stored Jenkins credentials.
 
-The project uses the following monitoring components:
+6️⃣ PUSH DOCKER IMAGE
 
-🔍 Prometheus
+The Docker image is pushed to Docker Hub.
 
-Prometheus is used to collect system metrics.
+darundoc/devops-capstone:latest
 
-📡 Node Exporter
+7️⃣ DEPLOY TO AWS EC2
 
-Node Exporter exposes system-level metrics such as:
+Jenkins connects to the application EC2 instance through SSH.
 
-🖥️ CPU
-🧠 Memory
-💾 Disk
-🌐 Network
-📊 Grafana
+The deployment process:
 
-Grafana is used to visualize the collected metrics through a monitoring dashboard.
+Pull latest Docker image
+        ↓
+Stop existing container
+        ↓
+Remove existing container
+        ↓
+Start new container
+🔧 JENKINSFILE
 
-📈 Grafana Dashboard
+The Jenkins pipeline follows this workflow:
 
-The dashboard contains four main monitoring panels:
+Checkout
+   ↓
+Install Dependencies
+   ↓
+Test
+   ↓
+Build Docker Image
+   ↓
+Login to Docker Hub
+   ↓
+Push Docker Image
+   ↓
+Deploy to App EC2
 
-📊 Panel	📌 Metric
-🖥️ CPU Usage	CPU utilization
-🧠 Memory Usage	Memory utilization
-💾 Disk Usage	Disk utilization
-🌐 Network Traffic	Network receive/transmit traffic
-🛡️ Backup Automation
+The Jenkins pipeline uses:
 
-Application logs are backed up using a Bash shell script.
+Docker Hub Credential
+        +
+App EC2 SSH Credential
 
-The backup script collects Docker application logs and stores them in:
+to securely perform the deployment.
+
+📊 MONITORING AND OBSERVABILITY
+
+The project uses:
+
+Node Exporter
+      ↓
+Prometheus
+      ↓
+Grafana
+
+📡 NODE EXPORTER
+
+Node Exporter exposes system-level metrics.
+
+The monitored metrics include:
+
+🖥️ CPU Usage
+🧠 Memory Usage
+💾 Disk Usage
+🌐 Network Traffic
+
+Node Exporter runs on port:
+
+9100
+
+🔍 PROMETHEUS
+
+Prometheus collects the metrics exposed by Node Exporter.
+
+Example Prometheus configuration:
+
+scrape_configs:
+
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'node_exporter'
+    static_configs:
+      - targets: ['localhost:9100']
+
+Prometheus runs on:
+
+Port: 9090
+
+📊 GRAFANA
+
+Grafana is connected to Prometheus as the monitoring data source.
+
+The project dashboard contains four main panels:
+
+🖥️ CPU USAGE
+
+Displays CPU utilization.
+
+🧠 MEMORY USAGE
+
+Displays memory utilization.
+
+💾 DISK USAGE
+
+Displays disk utilization.
+
+🌐 NETWORK TRAFFIC
+
+Displays network receive and transmit traffic.
+
+Grafana runs on:
+
+Port: 3000
+
+📈 GRAFANA QUERIES
+🖥️ CPU USAGE
+100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
+🧠 MEMORY USAGE
+100 * (
+  1 -
+  (
+    node_memory_MemAvailable_bytes{job="node_exporter"}
+    /
+    node_memory_MemTotal_bytes{job="node_exporter"}
+  )
+)
+
+💾 DISK USAGE
+100 * (
+  1 -
+  (
+    max by (instance, mountpoint) (
+      node_filesystem_avail_bytes{fstype!~"tmpfs|overlay",mountpoint="/"}
+    )
+    /
+    max by (instance, mountpoint) (
+      node_filesystem_size_bytes{fstype!~"tmpfs|overlay",mountpoint="/"}
+    )
+  )
+)
+
+🌐 NETWORK RECEIVE
+sum by (instance) (
+  rate(node_network_receive_bytes_total{job="node_exporter",device!="lo"}[5m])
+)
+
+🌐 NETWORK TRANSMIT
+sum by (instance) (
+  rate(node_network_transmit_bytes_total{job="node_exporter",device!="lo"}[5m])
+)
+
+🛡️ BACKUP AUTOMATION
+
+Application logs are backed up using a Bash script.
+
+The backup directory is:
 
 /home/ubuntu/backups
+🐚 BACKUP SCRIPT
 
-Example backup file:
+The project uses the following Bash script:
 
-devops-app-YYYY-MM-DD_HH-MM-SS.log
-⏰ Cron Automation
+#!/bin/bash
 
-The backup script is scheduled to run automatically every day at 2:00 AM.
+BACKUP_DIR="/home/ubuntu/backups"
+DATE=$(date +"%Y-%m-%d_%H-%M-%S")
+
+docker logs devops-app > "$BACKUP_DIR/devops-app-$DATE.log"
+
+echo "Backup completed: $BACKUP_DIR/devops-app-$DATE.log"
+
+⏰ CRON AUTOMATION
+
+The backup script is scheduled to run every day at 2:00 AM.
+
+Cron configuration:
 
 0 2 * * * /home/ubuntu/backup.sh
 
-This demonstrates how scheduled automation can be integrated into a DevOps workflow.
+The Cron configuration was saved as:
 
-🔁 Complete DevOps Workflow
+mycronjobs.txt
+
+🔁 COMPLETE DEVOPS WORKFLOW
 👨‍💻 Developer
-      │
-      ▼
+      |
+      v
 🐙 GitHub
-      │
-      ▼
+      |
+      v
 🔧 Jenkins
-      │
-      ├── 📥 Checkout
-      │
-      ├── 📦 Install Dependencies
-      │
-      ├── 🧪 Test
-      │
-      ├── 🐳 Docker Build
-      │
-      ├── 🔐 Docker Hub Login
-      │
-      ├── 📤 Docker Push
-      │
-      ▼
+      |
+      +-- 📥 Checkout
+      |
+      +-- 📦 Install Dependencies
+      |
+      +-- 🧪 Test
+      |
+      +-- 🐳 Docker Build
+      |
+      +-- 🔐 Docker Hub Login
+      |
+      +-- 📤 Docker Push
+      |
+      v
 📦 Docker Hub
-      │
-      ▼
+      |
+      v
 ☁️ AWS EC2
-      │
-      ▼
+      |
+      v
 🚀 Node.js Application
-      │
-      ├───────────────┐
-      ▼               ▼
-📡 Node Exporter   📝 Application Logs
-      │               │
-      ▼               ▼
-🔍 Prometheus      🐚 Bash Script
-      │               │
-      ▼               ▼
-📊 Grafana         ⏰ Cron
-✨ Key DevOps Practices Demonstrated
+      |
+      +----------------------+
+      |                      |
+      v                      v
+📡 Node Exporter        📝 Application Logs
+      |                      |
+      v                      v
+🔍 Prometheus           🐚 Bash Script
+      |                      |
+      v                      v
+📊 Grafana              ⏰ Cron
+
+✨ KEY DEVOPS PRACTICES DEMONSTRATED
 
 ✅ Git-based version control
+
 ✅ GitHub source management
+
 ✅ Jenkins CI/CD automation
+
 ✅ Automated dependency installation
+
 ✅ Application syntax validation
+
 ✅ Docker containerization
+
 ✅ Docker Hub image management
+
 ✅ SSH-based deployment
+
 ✅ AWS EC2 deployment
+
 ✅ Prometheus monitoring
+
 ✅ Grafana visualization
+
 ✅ Node Exporter metrics collection
+
 ✅ Bash scripting
+
 ✅ Cron-based backup automation
-🔗 Project Links
+
+
+🔗 PROJECT LINKS
 🐙 GitHub Repository
 
 https://github.com/DarunVisneswaran/devops-capstone
@@ -297,35 +534,64 @@ https://github.com/DarunVisneswaran/devops-capstone
 
 https://hub.docker.com/r/darundoc/devops-capstone
 
-🎓 Learning Outcomes
+🎓 LEARNING OUTCOMES
 
-Through this project, the following DevOps concepts were implemented:
+This project provided practical experience in:
 
 🚀 Continuous Integration
+
 🔄 Continuous Delivery
-🐳 Containerization
-☁️ Cloud Deployment
-📊 Monitoring & Observability
-🐚 Infrastructure Automation
-⏰ Scheduled Backup Automation
+
+🐳 Docker Containerization
+
+☁️ AWS Cloud Deployment
+
+🔧 Jenkins Automation
+
+📊 Monitoring and Observability
+
+🔍 Prometheus
+
+📈 Grafana
+
+📡 Node Exporter
+
+🐚 Bash Automation
+
+⏰ Cron Scheduling
+
 🔐 Secure Credential Management
 
-🏁 Conclusion
+🏁 CONCLUSION
 
 This project demonstrates an end-to-end DevOps implementation for a Node.js web application.
 
-From GitHub source management to Jenkins automation, Docker containerization, Docker Hub, AWS EC2 deployment, Prometheus monitoring, Grafana visualization, and automated backups, the project brings multiple DevOps practices together into a single workflow.
+The workflow covers:
+
+GitHub
+   ↓
+Jenkins
+   ↓
+Docker
+   ↓
+Docker Hub
+   ↓
+AWS EC2
+   ↓
+Node.js Application
+   ↓
+Prometheus
+   ↓
+Grafana
+
+In addition, Bash scripting and Cron provide automated application log backups.
 
 <p align="center">
-🚀 Build • Automate • Deploy • Monitor ☁️
-⭐ DevOps Capstone Project ⭐
+
+🚀 <strong>BUILD • AUTOMATE • DEPLOY • MONITOR</strong> ☁️
+
+<br><br>
+
+⭐ <strong>DEVOPS CAPSTONE PROJECT</strong> ⭐
+
 </p> ```
-✅ What you need to do now
-Open README.md in VS Code.
-Delete everything currently inside it.
-Copy the entire block above and paste it.
-Press Ctrl + S.
-
-That's it for this step. Don't run Git commands yet.
-
-Once you've saved it, tell me “README saved”, Buddy. Then we'll verify it and push it to GitHub. 🚀
