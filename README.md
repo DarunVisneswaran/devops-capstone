@@ -720,28 +720,6 @@ mycronjobs.txt
 
 ---
 
-<h2>📸 Project Evidence</h2>
-
-<p>
-The project implementation is supported by screenshots and execution evidence covering:
-</p>
-
-<ul>
-  <li>🐙 GitHub Repository</li>
-  <li>🌐 Node.js Application</li>
-  <li>🐳 Dockerfile</li>
-  <li>🔧 Jenkinsfile</li>
-  <li>✅ Successful Jenkins Pipeline</li>
-  <li>📦 Docker Hub Image</li>
-  <li>☁️ AWS EC2 Deployment</li>
-  <li>🔍 Prometheus Monitoring</li>
-  <li>📊 Grafana Dashboard</li>
-  <li>🐚 Bash Backup Script</li>
-  <li>⏰ Cron Configuration</li>
-</ul>
-
----
-
 <h2>🔗 Project Links</h2>
 
 <h3>🐙 GitHub Repository</h3>
@@ -809,8 +787,5 @@ provide monitoring visibility and Bash with Cron provides automated backups.
   <strong>⭐ DEVOPS CAPSTONE PROJECT ⭐</strong>
 </p>
 
-<p align="center">
-  Made with ❤️ using DevOps practices
-</p>
 
 </p>
