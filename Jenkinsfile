@@ -59,7 +59,7 @@ pipeline {
             steps {
                 sshagent(['app-ec2-ssh']) {
                     sh '''
-                        ssh -o StrictHostKeyChecking=no ubuntu@13.126.254.144 "
+                        ssh -o StrictHostKeyChecking=no ubuntu@3.110.224.49 "
                             docker pull $IMAGE_NAME &&
                             docker stop devops-app || true &&
                             docker rm devops-app || true &&
