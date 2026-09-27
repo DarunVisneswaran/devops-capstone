@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CloudOps DevOps Platforms</title>
+    <title>CloudOps DevOps</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet"
